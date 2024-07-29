@@ -13,7 +13,7 @@ function App() {
       <Header></Header>
       <Routes>
         <Route index element={<ProductList />}></Route>
-        <Route path="/Product" element={<Product_Comp />}></Route>
+        <Route path="/Product/:sku" element={<Product_Comp />}></Route>
       </Routes>
       <Footer></Footer>
     </div>

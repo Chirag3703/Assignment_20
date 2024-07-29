@@ -1,7 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link} from "react-router-dom";
+import allData from "./DummyData";
 
-function Product({category, image, title, actual, price}) {
+function Product({category, image, title, actual, price, sku}) {
+
     return (
         <div className="max-w-64 font-semibold">
             <img className="h-64 w-full object-cover" src={image} />
@@ -17,7 +19,7 @@ function Product({category, image, title, actual, price}) {
             <div>
                 <span className="text-gray-400"><del>{actual}</del></span> ${price}
             </div>
-            <Link to="/Product">View Product</Link>
+            <Link to={"/Product/" + sku}>View Product</Link>
         </div>
     )
 }
